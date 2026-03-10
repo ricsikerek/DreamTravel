@@ -1,0 +1,92 @@
+*{margin: 0; padding: 0; box-sizing: border-box}
+
+body{
+    background: radial-gradient(rgb(200, 200, 200), rgb(50, 50, 50));
+}
+/**első: elmosódás, második: méret**/
+header{
+    background: url("../img/pexels-pixabay-210205.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px 10px;
+}
+
+header h1{
+    animation-name: color;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav{
+    background-color: rgba(1,1,1,.5);
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+nav a:hover{
+    background-color: rgba(6, 43, 77, 0.2);
+    color: aliceblue;
+}
+@keyframes color{
+    0% {color: red; transform: translateY(0px);}
+    25%{color: orange; transform: translateY(1px)}
+    50%{color: blue;transform: translateY(2px);}
+    100%{color: green;transform: translateY(3px)}
+}
+
+article{
+    background-color: rgba(1,1,1,.5);
+    color: #fff;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+article img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body{
+    padding: 1rem;
+    text-align: justify;
+}
+
+article:first-child:hover{ /*minden olyan article, ami szülőjének az 1. gyereke, article a gyerek*/
+    outline: 10px solid rgba(0,0,0,.3);
+}
+/* article:nth-child(2):hover{
+    border: 5px solid rgba(0,0,0,.3);
+} */
+article:last-child:hover{
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
+}
+
+.container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
